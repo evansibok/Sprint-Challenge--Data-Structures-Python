@@ -20,17 +20,21 @@ f.close()
 
 duplicates = []  # Return the list of duplicates in this data structure
 
+
+# Previous code runtime is O(n^2)
 # Replace the nested for loops below with your improvements
 # for name_1 in names_1:
 #     for name_2 in names_2:
 #         if name_1 == name_2:
 #             duplicates.append(name_1)
 
-for name_1 in names_1:
+
+# Optimized solution runtime is O(n log n)
+for name_1 in names_1:  # O(n)
     bst.insert(name_1)
 
-for name_2 in names_2:
-    if bst.contains(name_2):
+for name_2 in names_2:  # O(n)
+    if bst.contains(name_2):  # O(1)
         duplicates.append(name_2)
 
 end_time = time.time()
