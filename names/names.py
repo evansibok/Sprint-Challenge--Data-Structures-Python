@@ -33,8 +33,8 @@ duplicates = []  # Return the list of duplicates in this data structure
 for name_1 in names_1:  # O(n)
     bst.insert(name_1)
 
-for name_2 in names_2:  # O(n)
-    if bst.contains(name_2):  # O(1)
+for name_2 in names_2:  # O(log n)
+    if bst.contains(name_2):
         duplicates.append(name_2)
 
 end_time = time.time()
